@@ -78,12 +78,13 @@
       .gift-copy p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 40px; }
       .gift-copy strong { display: block; margin-bottom: 12px; }
 
-      .rsvp { min-height: 754px; padding: 232px 0 120px; background: var(--red); color: white; }
-      .rsvp-copy { width: min(486px, 48%); }
+      .rsvp { min-height: 754px; padding: 0; background: var(--red); color: white; display: flex; align-items: center; }
+      .rsvp .container { min-height: 754px; display: flex; align-items: center; }
+      .rsvp-copy { width: 43%; text-align: center; }
       .rsvp h2 { font-size: 4rem; line-height: 1.05; margin-bottom: 24px; }
       .rsvp p { font-size: 1.05rem; line-height: 1.5; margin-bottom: 48px; }
       .rsvp .button { background: var(--orange); color: var(--black); }
-      .wine-photo { display: block; position: absolute; right: 0; top: 0; width: 68%; height: 100%; object-fit: contain; object-position: center right; opacity: .55; }
+      .wine-photo { display: block; position: absolute; right: -5%; top: -10%; width: 76%; height: 120%; object-fit: contain; object-position: center; opacity: .55; }
       .wine-doodle { display: none; }
       .pending { cursor: pointer; }
       .notice { position: fixed; z-index: 20; left: 50%; bottom: 24px; transform: translate(-50%, 24px); opacity: 0; pointer-events: none; background: #111; color: #fff; padding: 14px 20px; border-radius: 999px; font-size: .9rem; transition: .25s ease; box-shadow: 0 8px 30px rgb(0 0 0 / 30%); }
@@ -133,12 +134,13 @@
         .gift-copy h2 { font-size: 2.5rem; }
         .gift-copy p { font-size: 1rem; margin-bottom: 32px; }
 
-        .rsvp { min-height: 853px; padding: 300px 0 100px; text-align: center; }
-        .rsvp-copy { width: 100%; }
+        .rsvp { min-height: 853px; padding: 0; display: grid; place-items: center; text-align: center; }
+        .rsvp .container { width: 100%; min-height: 853px; padding: 0 24px; display: flex; align-items: center; justify-content: center; }
+        .rsvp-copy { width: 100%; position: relative; z-index: 2; }
         .rsvp h2 { font-size: 3rem; }
         .rsvp-title-line { display: block; }
         .rsvp p { font-size: 1rem; margin-bottom: 32px; }
-        .wine-photo { display: block; inset: 24px 0 auto; width: 100%; height: 60%; object-fit: contain; object-position: center top; transform: none; opacity: .55; }
+        .wine-photo { display: block; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transform: translateY(-3%) scale(1.55); transform-origin: center; opacity: .24; }
         .wine-doodle { display: none; }
       }
 

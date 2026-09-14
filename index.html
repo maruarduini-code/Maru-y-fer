@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Invitación al casamiento de Maru y Fer — 28 de noviembre de 2026." />
+    <title>Maru y Fer — Nos casamos</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%239e301a'/%3E%3Cpath d='M17 40c8-18 22-18 30 0M22 24l10 10 10-10' fill='none' stroke='%23fff1de' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --black: #010101;
+        --pink: #f3d3d6;
+        --orange: #fe9d61;
+        --cream: #fff1de;
+        --red: #9e301a;
+        --button: #d34428;
+        --shadow: 0 5px 8px rgb(0 0 0 / 24%);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--black); background: var(--black); font-family: Montserrat, Arial, sans-serif; font-size: 16px; }
+      h1, h2, p { margin: 0; }
+      a { color: inherit; }
+      .display { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
+      .eyebrow { font-size: .95rem; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; }
+      .section { position: relative; overflow: hidden; }
+      .container { width: min(1200px, calc(100% - 48px)); margin-inline: auto; position: relative; z-index: 2; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 32px; border: 0; border-radius: 999px; background: var(--button); color: white; font-size: .875rem; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: transform .2s ease, filter .2s ease; }
+      .button:hover { transform: translateY(-2px); filter: brightness(.94); }
+      .button:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+
+      .hero { min-height: 745px; background: var(--black); display: grid; place-items: center; color: white; }
+      .hero-collage { position: absolute; top: 50%; left: 0; width: 100%; aspect-ratio: 1441 / 615; transform: translateY(-50%); display: grid; grid-template-columns: 413fr 615fr 413fr; }
+      .hero-photo { min-width: 0; overflow: hidden; }
+      .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .mobile-hero { display: none; }
+      .hero::after { content: ""; position: absolute; inset: 0; background: rgb(1 1 1 / 8%); }
+      .hero-content { position: relative; z-index: 2; text-align: center; padding: 100px 24px 50px; }
+      .hero h1 { font-size: clamp(5rem, 9vw, 8rem); line-height: .88; }
+      .hero-script { display: block; width: min(559px, 78vw); margin: -8px auto 0; transform: rotate(-4.17deg); }
+      .spark { position: absolute; z-index: 3; width: 48px; height: 51px; object-fit: contain; }
+      .spark.one { left: 25%; top: 55%; }
+      .spark.two { right: 24%; top: 42%; }
+
+      .details { min-height: 885px; padding: 140px 0; background: var(--pink); }
+      .details::before, .details::after { content: ""; position: absolute; width: 520px; height: 520px; background: url("assets/detail-flower.png") center/contain no-repeat; opacity: 1; }
+      .details::before { left: 0; bottom: 0; transform: rotate(180deg); }
+      .details::after { right: -130px; top: -40px; }
+      .detail-list { display: grid; gap: 40px; }
+      .detail-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+      .detail-value { font-size: clamp(3.2rem, 6.7vw, 6rem); line-height: 1; text-align: right; }
+      .detail-row.small .detail-value { font-size: clamp(2.7rem, 4.5vw, 4rem); }
+      .place-block { text-align: right; }
+      .place-address { margin-top: 16px; font-size: 1.05rem; }
+      .place-block .button { position: relative; z-index: 3; margin-top: 30px; pointer-events: auto; touch-action: manipulation; }
+
+      .cards-section { min-height: 1001px; padding: 202px 0 130px; background: var(--orange); }
+      .cards { display: flex; justify-content: center; align-items: center; gap: 70px; }
+      .card { width: min(486px, 43vw); min-height: 556px; padding: 68px 40px; background: var(--cream); border-radius: 6px; box-shadow: var(--shadow); }
+      .card:first-child { transform: rotate(-1.7deg) translateY(-74px); }
+      .card:last-child { transform: rotate(2deg) translateY(74px); }
+      .card-icon { width: 105px; height: 103px; object-fit: cover; object-position: center; margin-bottom: -2px; }
+      .card h2 { font-size: 3rem; line-height: 1; margin-bottom: 20px; }
+      .card p { font-size: 1.05rem; line-height: 1.45; margin-bottom: 36px; }
+      .card .button { position: relative; z-index: 3; pointer-events: auto; touch-action: manipulation; }
+
+      .gifts { min-height: 856px; padding: 0; background: var(--cream); }
+      .gifts-grid { width: min(1020px, 100%); min-height: 856px; margin: auto; display: grid; grid-template-columns: 423px 1fr; align-items: center; gap: 150px; }
+      .house-collage { height: 856px; display: grid; grid-template-rows: repeat(2, 1fr); overflow: hidden; }
+      .house-collage img { width: 100%; height: 100%; object-fit: cover; }
+      .house-collage img:first-child { object-position: center 28%; }
+      .gift-copy { max-width: 384px; }
+      .gift-copy h2 { font-size: 4rem; margin-bottom: 24px; }
+      .gift-copy p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 40px; }
+      .gift-copy strong { display: block; margin-bottom: 12px; }
+
+      .rsvp { min-height: 754px; padding: 232px 0 120px; background: var(--red); color: white; }
+      .rsvp-copy { width: min(486px, 48%); }
+      .rsvp h2 { font-size: 4rem; line-height: 1.05; margin-bottom: 24px; }
+      .rsvp p { font-size: 1.05rem; line-height: 1.5; margin-bottom: 48px; }
+      .rsvp .button { background: var(--orange); color: var(--black); }
+      .wine-photo { position: absolute; right: -40px; top: 0; width: 60%; height: 100%; object-fit: cover; opacity: .32; }
+      .wine-doodle { position: absolute; right: 7%; top: 20%; width: min(460px, 38vw); opacity: .55; }
+      .pending { cursor: pointer; }
+      .notice { position: fixed; z-index: 20; left: 50%; bottom: 24px; transform: translate(-50%, 24px); opacity: 0; pointer-events: none; background: #111; color: #fff; padding: 14px 20px; border-radius: 999px; font-size: .9rem; transition: .25s ease; box-shadow: 0 8px 30px rgb(0 0 0 / 30%); }
+      .notice.show { opacity: 1; transform: translate(-50%, 0); }
+
+      @media (min-width: 701px) {
+        .details .eyebrow { font-size: 1.25rem; }
+      }
+
+      @media (max-width: 700px) {
+        .container { width: calc(100% - 48px); }
+        .hero { min-height: 851px; }
+        .hero-collage { display: none; }
+        .mobile-hero { display: block; position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 68% center; }
+        .hero h1 { font-size: 6rem; line-height: .83; width: 290px; margin: auto; }
+        .hero-script { width: 364px; max-width: 95vw; margin-top: 5px; }
+        .spark.one { left: 45px; top: 285px; }
+        .spark.two { right: 36px; top: 425px; }
+
+        .details { min-height: 853px; padding: 122px 0; }
+        .details::before { display: none; }
+        .detail-list { gap: 68px; }
+        .detail-row { display: block; }
+        .detail-list > .detail-row:first-child, .times { height: 100px; }
+        .detail-value, .detail-row.small .detail-value, .place-block { margin-top: 16px; text-align: left; }
+        .detail-value, .detail-row.small .detail-value { font-size: 3rem; }
+        .times { display: grid; grid-template-columns: 1fr 1fr; gap: 47px; }
+        .place-address { font-size: 1rem; line-height: 1.35; }
+        .place-block .button { margin-top: 28px; }
+
+        .cards-section { min-height: 1242px; padding: 135px 24px 110px; }
+        .cards { display: grid; gap: 28px; }
+        .card { width: 100%; max-width: 345px; min-height: 450px; padding: 36px 64px; }
+        .card:first-child, .card:last-child { transform: none; }
+        .card:first-child { transform: rotate(-1.15deg); }
+        .card:last-child { transform: rotate(1.28deg); }
+        .card-icon { width: 80px; height: 80px; }
+        .card h2 { font-size: 2.5rem; }
+        .card p { font-size: 1rem; }
+
+        .gifts { min-height: 853px; padding-top: 101px; }
+        .gifts-grid { min-height: 752px; display: flex; flex-direction: column; gap: 0; }
+        .house-collage { width: 100%; height: 271px; margin-left: 0; padding-inline: 24px; display: grid; grid-template-columns: repeat(2, min(82vw, 351px)); grid-template-rows: 271px; gap: 8px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-padding-inline: 24px; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-inline: contain; }
+        .house-collage::-webkit-scrollbar { display: none; }
+        .house-collage img { scroll-snap-align: start; }
+        .gift-copy { width: calc(100% - 48px); max-width: none; margin: 90px auto 0; }
+        .gift-copy h2 { font-size: 2.5rem; }
+        .gift-copy p { font-size: 1rem; margin-bottom: 32px; }
+
+        .rsvp { min-height: 853px; padding: 300px 0 100px; text-align: center; }
+        .rsvp-copy { width: 100%; }
+        .rsvp h2 { font-size: 3rem; }
+        .rsvp-title-line { display: block; }
+        .rsvp p { font-size: 1rem; margin-bottom: 32px; }
+        .wine-photo { inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center top; transform: translateX(31%) scale(3.2); transform-origin: center top; opacity: .32; }
+        .wine-doodle { display: none; }
+      }
+
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button, .notice { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="section hero" aria-labelledby="main-title">
+        <div class="hero-collage" aria-hidden="true">
+          <div class="hero-photo"><img src="assets/hero-left.png" alt="" /></div>
+          <div class="hero-photo"><img src="assets/hero-center.png" alt="" /></div>
+          <div class="hero-photo"><img src="assets/hero-right.png" alt="" /></div>
+        </div>
+        <img class="mobile-hero" src="assets/hero-right.png" alt="" />
+        <img class="spark one" src="assets/spark.png" alt="" />
+        <img class="spark two" src="assets/spark.png" alt="" />
+        <div class="hero-content">
+          <h1 id="main-title" class="display">Maru y Fer</h1>
+          <img class="hero-script" src="assets/nos-casamos.png" alt="¡Nos casamos!" />
+        </div>
+      </section>
+
+      <section class="section details" aria-label="Datos del evento">
+        <div class="container detail-list">
+          <div class="detail-row">
+            <span class="eyebrow">Fecha</span>
+            <p class="display detail-value">28.nov.2026</p>
+          </div>
+          <div class="times">
+            <div class="detail-row small"><span class="eyebrow">Ceremonia</span><p class="display detail-value">18hs.</p></div>
+            <div class="detail-row small"><span class="eyebrow">Recepción</span><p class="display detail-value">19hs.</p></div>
+          </div>
+          <div class="detail-row">
+            <span class="eyebrow">Lugar</span>
+            <div class="place-block">
+              <p class="display detail-value">Bahía Punta Chica</p>
+              <p class="place-address">Cmte. Luis Piedra Buena 3498 | Victoria</p>
+              <a class="button" href="https://maps.app.goo.gl/byYFSNaSXosr7zLA9?g_st=iw" target="_top" rel="external" aria-label="Abrir la ubicación de Bahía Punta Chica en Google Maps">Cómo llegar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cards-section" aria-label="Información para invitados">
+        <div class="cards">
+          <article class="card">
+            <img class="card-icon" src="assets/dress-icon.png" alt="" />
+            <h2 class="display">Dresscode</h2>
+            <p>Elegante.<br /><br />Evitá el blanco, manteca o similares.<br /><br />Recomendamos no usar taco fino, ya que una parte del evento será sobre césped.</p>
+            <a class="button" href="https://pin.it/6KJVcu37T" target="_top" rel="external" aria-label="Abrir referencias de dresscode en Pinterest">Referencias</a>
+          </article>
+          <article class="card">
+            <img class="card-icon" src="assets/photo-icon.png" alt="" />
+            <h2 class="display">Fotos y videos</h2>
+            <p>¡Queremos revivir cada momento!<br /><br />Compartí las fotos y videos de nuestra fiesta.</p>
+            <a class="button" href="https://photos.app.goo.gl/bKy1wywSDQmfyoHP9" target="_top" rel="external" aria-label="Abrir el álbum para subir fotos y videos">Subir fotos</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gifts" aria-labelledby="gift-title">
+        <div class="gifts-grid">
+          <div class="house-collage" role="region" aria-label="Galería de fotos de nuestro futuro hogar" tabindex="0">
+            <img src="https://www.figma.com/api/mcp/asset/6388db91-87bd-40ee-8d11-3901e5bf3550.png" alt="" />
+            <img src="https://www.figma.com/api/mcp/asset/ce396438-c166-46a9-819f-2390ff9fbaa9.png" alt="" />
+          </div>
+          <div class="gift-copy">
+            <h2 id="gift-title" class="display">Regalos</h2>
+            <p>Tu presencia ese día es lo más importante, pero si querés podés ayudarnos a construir nuestro hogar.</p>
+            <strong>Alias: maruyfer.casamiento</strong>
+            <span>(o efectivo)</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rsvp" aria-labelledby="rsvp-title">
+        <img class="wine-photo" src="https://www.figma.com/api/mcp/asset/febc50b9-23d2-4a83-b0ba-9cb7e6621522.png" alt="" />
+        <img class="wine-doodle" src="https://www.figma.com/api/mcp/asset/fbb8871c-2e49-445e-93bb-e6435ae482e4.png" alt="" />
+        <div class="container">
+          <div class="rsvp-copy">
+            <h2 id="rsvp-title" class="display"><span class="rsvp-title-line">¿Te</span> <span class="rsvp-title-line">esperamos?</span></h2>
+            <p>No te olvides de confirmar tu asistencia antes del 15 de octubre.</p>
+            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScap4W5UkF6CE2XWR5vU8igPyAtCC_d_qqyrW3W6xJ33Oe8Zg/viewform?usp=publish-editor" target="_top" rel="external" aria-label="Abrir el formulario para confirmar asistencia">Confirmar</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="notice" role="status" aria-live="polite">Falta agregar el enlace definitivo.</div>
+    <script>
+      const notice = document.querySelector('.notice');
+      document.querySelectorAll('.pending').forEach((button) => {
+        button.addEventListener('click', () => {
+          notice.classList.add('show');
+          window.clearTimeout(window.noticeTimer);
+          window.noticeTimer = window.setTimeout(() => notice.classList.remove('show'), 2500);
+        });
+      });
+    </script>
+  </body>
+</html>
